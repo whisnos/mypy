@@ -31,7 +31,7 @@ print(b, type(b))
 
 # 字符串 - str
 
-# b = int('') # int，可以转字符串的整数， 不能转字符串的浮点数 如：'15.156'
+# b = int('') # int，可以转字符串的整数， 不能转字符串的浮点数 如：'15.156'，try
 # print(b)
 
 # None  - NoneType
@@ -70,8 +70,8 @@ s = str(20.5)  # "20.5"
 print(s,type(s))
 
 # bool 转换
-b = bool('False')
-print(b,type(b))
+b = bool(None)
+print(55555555555555,b,type(b))
 
 # 运算符
 # 1 算数运算符
