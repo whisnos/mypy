@@ -38,7 +38,7 @@ print(c)
 print(2 ** 3)
 # ⑦%=
 
-# 3 比较运算符  - 2个对象进行比较运算，总会返回一个布尔值，True or False
+# 3 比较运算符  - 2个对象进行比较运算，总会返回一个布尔值，True or False -----------------------------
 a = 20
 b = 21
 # ① >
@@ -50,10 +50,10 @@ b = 21
 # ④ >=
 # print(a >= b)
 # ⑤ <=
-# ⑥ !=
+# ⑥ != 不等于
 # print(a != b)
 
-# ⑦ is 比较的是id
+# ⑦ is 比较的是id ---------------------------------------------
 print(id(a))
 print(id(b))
 print(a is b)
@@ -79,10 +79,10 @@ print(ord('b'))
 # ---
 print(chr(98))
 #
-print('哈哈哈哈哈哈', end='--------')
+print('哈哈哈哈哈哈', end='--------') # 默认 \n  哈哈哈哈哈哈--------哈哈哈哈哈哈
 print('哈哈哈哈哈哈')
 
-# 4 逻辑运算符 not and or   - 这个也是用来做判断的，也是返回 True or False
+# 4 逻辑运算符 not and or   - 这个也是用来做判断的，也是返回 True or False  --------------------------------
 # ① not 逻辑非  - 不是
 # 1)not False
 print(not False)
@@ -97,15 +97,20 @@ print(not '0')
 # 5)not None
 print(not None)
 
-a = 15
 
+# bool 进行转换为False ：'',0,None,False,  ----------------------------------
+# bool True 注意：'0','None','False'
+a = '0'
+
+# if 条件表达式:
+#     执行的代码块
 if a:
     print(123456)
 
 if False:
     print('hello', )
 
-# ② and 逻辑与
+# ② and 逻辑与  -----------------------
 # 1)True and True
 print(True and True)
 # 2)True and False
@@ -140,7 +145,7 @@ if a > b:
 else:
     max1 = b
 
-print(a if a > b else b)
+print(a*b if a > b else b-a)
 
 A = 10
 B = 100
@@ -150,6 +155,8 @@ if A > B:
     D = A
     if D > C:
         print('最大值：', D)
+        if A ==1:
+            pass
     else:
         print('最大值：', C)
 else:
@@ -162,7 +169,9 @@ else:
 # print(C if C > D = (A if A > B else B) > else D)
 
 # input()函数  ----- 返回的是 str 字符串
-print('--------')
+print('*'*50)
+i = input('请输入内容：')
+print(888, type(i))
 # i = input('请输入内容：')
 # print(i)
 
