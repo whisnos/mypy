@@ -1,7 +1,7 @@
 # 循环语句 while,for
 # for循环
 # 语法如下：
-# for 迭代对象 in 字符串|列表[]|元组|字典|集合：
+# for 迭代对象（变量） in 字符串|列表[]|元组|字典|集合：
 #   代码块
 
 # for i in 'wenjianjia':
@@ -34,7 +34,7 @@ print(str1[-1])
 # for i in num:
 #     print(i)
 
-# 在 Python 中，序列类型包括字符串、列表、元组     -   字典和结合
+# 在 Python 中，序列类型包括字符串、列表、元组     -   字典和集合
 
 # range
 # range(stop)
@@ -116,7 +116,7 @@ print(sum)
 # 第十三节：数据结构
 # 数据结构是指计算机中存储数据的方式 : str,int,float,bool,None,
 # 列表 list [1,2,False,'python',obj...] - 大众称为 数组
-for i in [1,2,False,'python']:
+for i in [1, 2, False, 'python']:
     print(i)
 
 list1 = [1, 2, False, 'python']
@@ -125,9 +125,9 @@ print(type(list1), list1[-1])
 # 列表，可以存储多个有序的数据
 # 列表中存储的数据，我们称为元素
 
-print([1,'字符串',True,None,[1,2,3],print])
+print([1, '字符串', True, None, [1, 2, 3], print])
 
-# len() 只有可被迭代才会有len()
+# len() 只有可被迭代（箱子）才会有len()
 # print(len(1)) # TypeError: object of type 'int' has no len()
 # print(len(True)) # TypeError: object of type 'bool' has no len()
 # print(len(15.5)) # TypeError: object of type 'float' has no len()
@@ -135,3 +135,8 @@ print([1,'字符串',True,None,[1,2,3],print])
 
 # len() 方法返回对象（字符、列表、元组、字典、集合等）长度或项目个数。
 print(len('python'))
+
+list1 = [1, 2, False, 'python']
+list2 = [45, 13, 156, True, 'debug5']
+print('个数:', len(list1))
+print('最大索引:', len(list1) - 1)
