@@ -23,7 +23,9 @@ new_list = list2[1:3]
 # 步长 [开始:结束:步长]  -  [2::1]
 list2 = [45, 13, 156, True, 'debug5', None, 0, 13]
 
-new_list = list2[::1] # [::0] ValueError: slice step cannot be zero
+new_list = list2[::2] # [::0] ValueError: slice step cannot be zero
+new = [45, 13, 156, True, 'debug5', None, 0, 13]
+# new[new.index('debug5')]   ------  new[4]
 print(list2, new_list)
 # 45 debug5
 
@@ -38,15 +40,18 @@ for i in list2:
     if i == 13:
         count +=1
 print('count', count)
-# 方法：
-# 1、求某个元素的第一个索引(无返回值)   -------- -----------------一个方法，如果没有返回值，你非要接收，则为None
+# 方法： (无返回值)   -------- -----------------一个方法，如果没有返回值，你非要接收，则为None
+
+
+# 1、求某个元素的第一个索引
 # 列表.index(元素)
-# print(666,list2.index('debug5'))
+print(666, list2.index('debug5'))
 
 # 2、给列表往 末尾 添加新的元素(无返回值)
 # 列表.append(元素)
 list2.append(777) # /əˈpend/ 添加
 # print(list2)
+print(list2.append(777))
 
 # 3、给列表某个位置插入元素(无返回值)
 # 列表.insert(插入当前索引之前, 元素)
