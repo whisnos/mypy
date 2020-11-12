@@ -98,7 +98,7 @@ print(666, l1)
 # 增
 l1.append(0)
 l1.insert(1,5)
-l1.extend('python')# 值需要为序列
+l1.extend('python')# 值需要为序列 不能写 int。。
 # 删
 l1.pop(-1) # 传索引
 l1.remove(6) # 传元素
@@ -134,10 +134,11 @@ print(type(t)) # <class 'tuple'>
 # A B 值交换
 # A = 5
 # B = 100
-# A, B = (B, A)
+# A, B = B, A
 # print(A, B)
 
-# 解包（解构）
+# 解包（解构） 可以拆序列
+A,*B = 'python'
 '''
 注意：在进行解包的时候，变量的数量要和元组的个数一致，或者也可以在变量前面加 * ,将会获取元组剩余的元素
 a,b,*c=(1,2,3,4,5,6)
