@@ -84,7 +84,7 @@ A = 0
 while A <= 10:
     A += 1
     if A == 8:
-        break
+        continue
     print('666')
 
 if 1:

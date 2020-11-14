@@ -19,7 +19,7 @@ a = int()
 
 # True --1, False --0
 b = int(True)
-# print(b, type(b)) # 1 <class 'int'>
+print(b, type(b)) # 1 <class 'int'>
 
 b = int(False)
 # print(b, type(b)) # 0 <class 'int'>
@@ -29,16 +29,18 @@ b = int(False)
 b = int(13.64) # 直接取整，不进行四舍五入
 print(b, type(b))
 
+
 # 字符串 - str
 
-# b = int('') # int，可以转字符串的整数， 不能转字符串的浮点数 如：'15.156'，try
-# print(b)
+b = int('1') # int，可以转字符串的整数， 不能转字符串的浮点数,还有空串 如：'15.156'，try
+print(666,b)
 
-# None  - NoneType
+# None  - NoneType 也会报错
 # b = int(None)
-# print(b)
+# b = int({})
+print(b)
 
-# 浮点数字符串，int() 会报错
+# int 浮点数字符串，int() 会报错 [] {} ''
 # int(None) 报错
 # int('')报错
 
