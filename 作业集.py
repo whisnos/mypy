@@ -88,14 +88,44 @@ Login()
 # 14天
 '''
 1、写一个函数，有一份成绩单：ScoreList = [{"name": "wron", "score": 85}, {"name": "kxion", "score": 96}, {"name": "zhihua", "score": 90}, {"name": "dabao", "score": 97}, {"name": "yujie", "score": 89}]，功能是：把分数大等于95分的学生信息返回出来；
+#  ------大宝
+ScoreList = [{"name": "wron", "score": 85}, {"name": "kxion", "score": 96}, {"name": "zhihua", "score": 90}, {"name": "dabao", "score": 97}, {"name": "yujie", "score": 89}]
+
+def fenshu95(a, b=None):
+    b = []
+    for i in a:
+        if i['score'] >= 95:
+            b.append(i)
+    return b
+
+c = fenshu95(ScoreList)
 
 2、写一个函数，功能：验证一个对象是否为整数，如果是，把值扔出来，否则做个提示告知；
+def is_int(a):
+    if int == type(a):
+        print('是整数')
+        return a
+    return print('不是整数')
 
+is_int(5)
 3、写一个函数，输入一个字符串，检查字符串的长度，并检查字符串里面是否有敏感词字眼；
+MINGAN = ['党','政府','公安',]
+def check():
+    a = input("请输入:")
+    if len(a) == 0:
+        return ('请不要输入空字符串')
+    for i in a:
+        if i in mingan:
+            return ('有敏感字眼')
+    return ('没有敏感字眼')
+
+res = check()
+print(res)
 '''
 
 # 15天
 '''
 1、写一个函数，用不定长参数来实现对数据（列表或元组）里面的数值元素，进行累加求和功能
+[1,35,153,True,'debug5',None,{},(1,2),366,15,36.31]   - - - 1,35,153,366,15,36.31
 （使用到 isinstance()）
 '''
