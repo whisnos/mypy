@@ -129,3 +129,37 @@ print(res)
 [1,35,153,True,'debug5',None,{},(1,2),366,15,36.31]   - - - 1,35,153,366,15,36.31
 （使用到 isinstance()）
 '''
+A=[1, 35, 153, True, 'debug5', None, {}, (1, 2), 366, 15, 36.31]
+# sum = 0
+def fn(*a, **kw): # 装包
+    print(type(a))
+    print(a)
+    print(kw)
+    sum = 0
+    for i in a:
+        if isinstance(i, (int, float)):
+            sum += i
+    return sum
+
+B=fn(*A, a=66) # 拆包
+print(B)
+
+
+
+
+
+
+
+# 16天
+'''
+开发一个公司员工管理系统，实现对员工的管理（增，删，改，查）及退出系统
+
+功能：
+0:显示所有员工信息
+1:添加一个员工信息
+2:删除一个员工信息
+3:修改一个员工信息
+4:查询一个员工信息
+exit:退出公司员工管理系统
+'''
+

@@ -60,10 +60,27 @@ def text():
 账号和密码，如果三次都失败，打印登录失败'''
 #登录录入函数
 def LoginInput(user='',password=''):
+    '''
+    我是 LoginInput 函数
+    :param user:
+    :param password:
+    :return:
+    '''
     u = input("user:")
     p = input("password:")
     print("您已输入用户名密码！")
     return [u,p]
+
+
+def LoginInput1(user='',password=''):
+    '''
+    我是 LoginInput 函数
+    :param user:
+    :param password:
+    :return:
+    '''
+    print("您已输入用户名密码！")
+    return []
 
 #登录和登录验证函数
 def Login():
