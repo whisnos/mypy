@@ -8,6 +8,7 @@ with open(file_name, 'rt', encoding='utf8') as fileobj:
     print(fileobj.read(size))
 
 '''
+from A18 import out
 
 dict1 = {
     'code': 0,
@@ -72,6 +73,7 @@ def LoginInput(user='',password=''):
     return [u,p]
 
 
+@out
 def LoginInput1(user='',password=''):
     '''
     我是 LoginInput 函数
@@ -79,7 +81,15 @@ def LoginInput1(user='',password=''):
     :param password:
     :return:
     '''
+    start_time = time.time()
+    print('开始', start_time)
+
     print("您已输入用户名密码！")
+
+    end_time = time.time()
+    print('结束', end_time)
+    print('该函数耗时为：', end_time - start_time)
+
     return []
 
 #登录和登录验证函数
@@ -98,4 +108,4 @@ def Login():
         return print('登录成功!')
     return print('登录失败!')
 
-Login()
+LoginInput1()
