@@ -18,3 +18,11 @@
 # git checkout .
 
 
+
+# 5
+# 绑定仓库地址
+# git remote add origin https://github.com/whisnos/mypy.git
+
+# 6
+# 拉
+# git pull origin master
