@@ -344,3 +344,28 @@ while True:
     elif res == "exit":
         break
 
+
+# 装饰器
+'''
+def zhuang(func):
+    def inner(a, b):
+        print('程序开始运行')
+        root = input('请输入你的用户名：')
+        if root == 'root' or root == 'admin':
+            k = func(a, b)
+            return k
+        else:
+            print('你输入的用户名有误')
+            return False
+
+    return inner
+
+
+@zhuang
+def sun(a, b):
+    k = a + b
+    return k
+
+
+print(sun(1, 2))
+'''

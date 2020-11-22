@@ -146,7 +146,7 @@ test()
 
 class Animal():
 
-    def sleep(self):
+    def sleep(A):
         print('睡觉~~~')
         return 666
 

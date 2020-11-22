@@ -1,6 +1,6 @@
 # GIT
 
-# 1
+# 1 初始化
 # 一个目录，只需一次
 # git init
 
@@ -26,3 +26,8 @@
 # 6
 # 拉
 # git pull origin master
+
+
+
+#----------注意
+# git pull 操作之前 一定进行 git status，查看本地文件是否有被修改，以免冲突
