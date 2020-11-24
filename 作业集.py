@@ -369,3 +369,269 @@ def sun(a, b):
 
 print(sun(1, 2))
 '''
+
+# 21天
+# 志华 --------------------------------------------------------
+'''
+定义一个警察类：
+ 警察有名字，有血量HP，默认是1000，
+ 警察有一个抓人的功能，可以回血500
+
+定义一个普通人类：
+ 普通人有名字，有血量HP，默认是800
+
+定义一个小偷类：
+ 小偷也有名字，有血量HP，默认是200
+ 小偷有一个偷普通人东西的功能，可以回血250，然后普通人要掉血300
+
+
+游戏顺序:
+小偷去偷普通人的一个东西，
+然后普通人看自己的血量
+警察去抓小偷
+'''
+
+
+class Polic():
+    def __init__(self, name1):
+        self.name1 = name1
+        self.hp1 = 1000
+
+    def take(self):
+        print("警察现在血量为：", self.hp1)
+        print("警察开始抓小偷了")
+        self.hp1 += 500
+        print("警察抓到小偷了自身回血500，现在为：", self.hp1)
+
+
+class People():
+    def __init__(self, name2):
+        self.name2 = name2
+        self.hp2 = 800
+
+    def see(self):
+        while True:
+            if self.hp2 >= 0:
+                print("平民现在血量为：", self.hp2)
+                self.hp2 -= 300
+                print("平民被偷了，自身还剩:", self.hp2)
+                return C.take()
+            else:
+                print("平民没血啦，小偷赢了")
+                break
+
+
+class Stolen():
+    def __init__(self, name3):
+        self.name3 = name3
+        self.hp3 = 200
+
+    def steel(self):
+        while True:
+            if self.hp3 >= 0:
+                print("小偷现在血量为：", self.hp3)
+                print(self.name3, "开始偷东西了")
+                self.hp3 += 250
+                return B.see()
+            else:
+                print("小偷没血啦，警察和平民赢了")
+                break
+
+
+A = Stolen("小偷")
+B = People("平民")
+C = Polic("警察")
+count = 3
+while count >= 0:
+    print('-' * 50)
+    A.steel()
+    count -= 1
+# 大宝的 ---------------------------------------
+
+# 定义一个警察类：
+#  警察有名字，有血量HP，默认是1000，
+#  警察有一个抓人的功能，可以回血500
+#
+# 定义一个普通人类：
+#  普通人有名字，有血量HP，默认是800
+#
+# 定义一个小偷类：
+#  小偷也有名字，有血量HP，默认是200
+#  小偷有一个偷普通人东西的功能，可以回血250，然后普通人要掉血300
+#
+#
+# 游戏顺序:
+# 小偷去偷普通人的一个东西，
+# 然后普通人看自己的血量
+# 警察去抓小偷
+class Police:
+    def __init__(self, name, blood=1000):
+        self.name = name
+        self.blood = blood
+
+    def zhua(self, obj):
+        self.blood += 500
+        obj.blood -= 200
+        print(f'{self.name}抓到小偷{obj.name},回血500,{obj.name}掉血200', self.blood, obj.blood)
+
+
+class people:
+    def __init__(self, name, blood=800):
+        self.name = name
+        self.blood = blood
+
+    def get_caught(self, obj):
+        self.blood -= 300
+        obj.blood += 250
+        print(f'{self.name}东西被偷了，掉血300', self.blood)
+
+
+class thief:
+    def __init__(self, name, blood=200):
+        self.name = name
+        self.blood = blood
+
+    def tou(self, obj):
+        self.blood += 250
+        obj.blood -= 300
+        print(f'偷到了东西，普通人掉血300，回血250', self.blood)
+
+
+
+print('=' * 20, '欢迎进入游戏', '=' * 20)
+print('请选择你的身份：')
+print('     1、警察')
+print('     2、普通人')
+print('     3、小偷')
+a = Police('警察小明')
+b = people('小东')
+b1 = people('小明')
+c = thief('小偷高高')
+num = int(input('请选择(1-3):'))
+if (num) == 1:
+    print(f'恭喜{a.name}，你的血量为{a.blood}')
+elif (num) == 2:
+    print(f'恭喜{b.name}，你的血量为{b.blood}')
+elif (num) == 3:
+    print(f'你是{c.name}，你的血量为{c.blood}')
+else:
+    print('请不要乱输入')
+while True:
+    print('请选择你要操作的选项：')
+    print(f'     1、{a.name}抓{c.name}')
+    print(f'     2、{b.name}快跑')
+    print(f'     3、{c.name}偷东西')
+    choice = int(input('请选择（1-3）：'))
+    if (choice) == 1:
+        # c.blood -= 200
+        a.zhua(c)
+        print('抓到小偷了')
+        # break
+    elif (choice) == 2:
+        # b.blood -= 300
+        b.get_caught(c)
+        print(f'{self.name}东西被偷了')
+        # break
+    elif (choice) == 3:
+        c.tou(b1)
+        c.tou(b)
+        # c.blood += 250
+        # break
+    else:
+        print('请不要乱输入')
+        # break
+
+# 坤雄 ----------------------------------------------------
+# 定义一个警察类：
+#  警察有名字，有血量HP，默认是1000，
+#  警察有一个抓人的功能，可以回血500
+#
+# 定义一个普通人类：
+#  普通人有名字，有血量HP，默认是800
+#
+# 定义一个小偷类：
+#  小偷也有名字，有血量HP，默认是200
+#  小偷有一个偷普通人东西的功能，可以回血250，然后普通人要掉血300
+#
+#
+# 游戏顺序:
+# 小偷去偷普通人的一个东西，
+# 然后普通人看自己的血量
+# 警察去抓小偷
+class Police:
+    def __init__(self, name, blood=1000):
+        self.name = name
+        self.blood = blood
+
+    def zhua(self, obj):
+        self.blood += 500
+        obj.blood -= 200
+        print(f'{self.name}抓到小偷{obj.name},回血500,{obj.name}掉血200', self.blood, obj.blood)
+
+
+class people:
+    def __init__(self, name, blood=800):
+        self.name = name
+        self.blood = blood
+
+    def get_caught(self, obj):
+        self.blood -= 300
+        obj.blood += 250
+        print(f'{self.name}东西被偷了，掉血300', self.blood)
+
+
+class thief:
+    def __init__(self, name, blood=200):
+        self.name = name
+        self.blood = blood
+
+    def tou(self, obj):
+        self.blood += 250
+        obj.blood -= 300
+        print(f'偷到了东西，普通人掉血300，回血250', self.blood)
+
+
+
+print('=' * 20, '欢迎进入游戏', '=' * 20)
+print('请选择你的身份：')
+print('     1、警察')
+print('     2、普通人')
+print('     3、小偷')
+a = Police('警察小明')
+b = people('小东')
+b1 = people('小明')
+c = thief('小偷高高')
+num = int(input('请选择(1-3):'))
+if (num) == 1:
+    print(f'恭喜{a.name}，你的血量为{a.blood}')
+elif (num) == 2:
+    print(f'恭喜{b.name}，你的血量为{b.blood}')
+elif (num) == 3:
+    print(f'你是{c.name}，你的血量为{c.blood}')
+else:
+    print('请不要乱输入')
+while True:
+    print('请选择你要操作的选项：')
+    print(f'     1、{a.name}抓{c.name}')
+    print(f'     2、{b.name}快跑')
+    print(f'     3、{c.name}偷东西')
+    choice = int(input('请选择（1-3）：'))
+    if (choice) == 1:
+        # c.blood -= 200
+        a.zhua(c)
+        print('抓到小偷了')
+        # break
+    elif (choice) == 2:
+        # b.blood -= 300
+        b.get_caught(c)
+        print(f'{self.name}东西被偷了')
+        # break
+    elif (choice) == 3:
+        c.tou(b1)
+        c.tou(b)
+        # c.blood += 250
+        # break
+    else:
+        print('请不要乱输入')
+        # break
+
