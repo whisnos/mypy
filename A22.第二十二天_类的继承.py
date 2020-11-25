@@ -91,7 +91,7 @@ class YY():
 
     def eat(self):
         print('爷爷吃饭~~')
-# Y = YY('爷爷', '北京四合院')
+Y = YY('爷爷', '北京四合院')
 # print(id(Y))
 class BB(YY,NN):
     def __init__(self,feiji,car,name,home):
