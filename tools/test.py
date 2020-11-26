@@ -109,3 +109,12 @@ def Login():
     return print('登录失败!')
 
 LoginInput1()
+
+def send_fruit():
+    print('送水果')
+
+
+from A24 import A24EAT
+A24EAT()
+
+print(__name__, 'test')
