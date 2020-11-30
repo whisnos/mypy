@@ -635,3 +635,69 @@ while True:
         print('请不要乱输入')
         # break
 
+# 猜单词
+# 志华
+import random
+def abc():
+    word = ["scripts", "desktop", "finished", "exit", "code"]
+    word1 = random.choice(word)
+    word2 = list(word1)
+    # print(word1,len(word1))
+    # for n in word1:
+    #     word2.append(n)
+    # print(word2)
+    # word4=""
+    # for i in word2:
+    #     word4 = word4 + i
+    word5=""
+    random.shuffle(word2)
+    # print(word2)
+    for i in word2:
+        word5 = word5 + i
+    print(word5)
+    while True:
+        word6 = input("猜猜您觉得正确的单词:")
+        if word6 == word1:
+            print("真棒，你猜对了。英雄请继续")
+            return abc()
+        else:
+            print("猜错啦")
+            while True:
+                an = input("是否继续猜(Y/N)？")
+                if an=="Y" or an=="y":
+                    break
+                if an == "N" or an == "n":
+                    return abc()
+            else:
+                print("输入Y或N")
+                continue
+        continue
+abc()
+
+# 志华
+def english_game():
+    print(1111)
+    words = ['hello', 'print', 'inpute', 'import', 'range', 'class', 'string', 'tuple', 'list', 'tuple', 'set']
+    print("欢迎参加本次游戏，游戏规则是：\n请您猜一下打乱字母顺序的单词，如果才对可以继续游戏，\n如果猜错请继续猜！")
+    while True:  # 如果是y或者Y才执行
+        starGame = input('要开始游戏吗(Y/N):')
+        if starGame == 'y' or starGame == 'Y':
+
+            randomWord = random.choice(words)  #
+            correctWord = randomWord  # 随机选出来的单词，因为之后要改变所有赋给correctword
+            jumbleWord = ''
+            while randomWord:
+                position = random.randrange(len(randomWord))
+                jumbleWord += randomWord[position]
+                randomWord = randomWord[:position] + randomWord[(position + 1):]
+            print('乱序后单词：', jumbleWord)
+            guessWord = input('\n请您猜猜看：')
+            while guessWord != correctWord and guessWord != '':
+                print("不好意思，您猜的不正确。")
+                guessWord = input("继续您猜：")
+            if guessWord == correctWord:
+                print("恭喜您！猜对啦！\n")
+            # starGame = input("\n\n请问是否继续游戏（Y/N）:")
+        else:
+            print('欢迎下次再来玩')
+            break

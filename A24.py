@@ -12,6 +12,11 @@ f = fruit.Fruit()
 f.color()
 '''
 # import 模块 as 起别名
+# from dfadf import english_game
+# from dfadf import process
+from dfadf import N
+from dfadf import *
+# print('666', N)
 '''
 import fruit as fr
 print(666, fr.A)
@@ -38,6 +43,7 @@ def A24EAT():
     print('我是A24')
 
 
+# english_game()
 
 
 
